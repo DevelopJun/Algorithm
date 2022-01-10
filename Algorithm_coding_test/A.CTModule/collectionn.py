@@ -7,6 +7,7 @@
 
 
 ##############################################
+import collections
 from collections import Counter
 from collections import deque
 
@@ -28,3 +29,17 @@ print(counter['🍇'])  # 1
 print(dict(counter))  # {'🍍': 3, '🍎': 4, '🍇': 1}
 
 ###############################################
+
+
+def solution(participant, completion):
+    print(collections.Counter(participant))
+    print(collections.Counter(completion))
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    print(list(answer.keys()))
+    return list(answer.keys())
+
+
+participant = ["marina", "josipa", "nikola", "vinko", "filipa"]
+completion = ["josipa", "filipa", "marina", "nikola"]
+print(solution(participant, completion))
+# 여기서 Counter 객체끼리 뺄셈이 가능하다는 점 상기. 프로그래머스 완주하지 못한 선수
