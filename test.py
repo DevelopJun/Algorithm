@@ -1,5 +1,4 @@
-from collections import deque
-
-priorities = [1, 1, 9, 1, 1, 1]
-d = deque([(v, i) for i, v in enumerate(priorities)])
-print(d)
+list_m = []
+dic = {1: 2}
+list_m.append(dic)
+print(list_m)
