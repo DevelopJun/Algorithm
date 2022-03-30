@@ -1,6 +1,8 @@
 # 반복수열 # 깔끔하게 풀었다.
 from collections import deque
 from sys import stdin
+
+from numpy import logical_and
 read = stdin.readline
 
 A, P = map(str, read().split())
@@ -36,3 +38,10 @@ for num in result:
 
 
 print(len(final_result))
+
+
+def dfs(graph, v, visited):
+    visited[v] = True
+    for i in graph[v]:
+        if not visited[i]:
+            dfs(graph, i, visited)

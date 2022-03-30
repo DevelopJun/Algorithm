@@ -1,4 +1,6 @@
-list_m = []
-dic = {1: 2}
-list_m.append(dic)
-print(list_m)
+import heapq
+q = []
+
+heapq.heappush(q, (0, 1))
+
+print(q)
